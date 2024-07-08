@@ -9,7 +9,7 @@
 @import url('./header.css');
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -22,4 +22,102 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+form {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+input {
+  padding-left: 16px;
+  border-radius: 4px;
+  width: 272px;
+  height: 38px;
+}
+
+button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 91px;
+  height: 40px;
+  background: #4e75ff;
+}
+
+button:hover {
+  background: #6c8cff;
+}
+
+.loader {
+  margin: 0 auto;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-bottom: 25px;
+  border-top: 4px solid black;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 2s linear infinite;
+}
+
+.loader::after {
+  margin: 0 auto;
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-left: 4px solid #ff3d00;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  display: none;
+}
+
+.gallery {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.card {
+  border: 1px solid black;
+  width: 360px;
+}
+
+.photo {
+  min-width: 360px;
+  max-height: 160px;
+}
+
+.card-img-top {
+}
+
+.card-body {
+  display: flex;
+  justify-content: center;
+}
+
+.card-text {
+  text-align: center;
 }
