@@ -9,16 +9,14 @@
   </head>
   <body>
     <form class="search">
-      <input
-        class="input"
-        name="query"
-        type="text"
-        placeholder="Search images..."
-      />
+      <input type="text" name="query" placeholder="Search images..." />
       <button type="submit">Search</button>
     </form>
+
+    <div class="gallery"></div>
+
+    <button class="load-more hidden">Load more</button>
     <div class="loader hidden"></div>
-    <ul class="gallery"></ul>
 
     <script type="module" src="./main.js"></script>
   </body>

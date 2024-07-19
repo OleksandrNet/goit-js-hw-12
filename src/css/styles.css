@@ -121,3 +121,14 @@ button:hover {
 .card-text {
   text-align: center;
 }
+
+/* .load-more {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.load-more::after {
+  content: '';
+} */
