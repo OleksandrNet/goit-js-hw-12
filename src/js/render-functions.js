@@ -20,7 +20,16 @@ export function renderCards(cards, galleryEl) {
     .join('');
 
   galleryEl.insertAdjacentHTML('beforeend', markup);
-  new SimpleLightbox('.gallery a').refresh();
+  // new SimpleLightbox('.gallery a');
+  // const lightbox = $('.gallery a').simpleLightbox({}).destrou();
+  // lightbox;
+
+  const lightbox = new SimpleLightbox('.gallery a', {
+    captionsData: 'alt',
+    captionDelay: 250,
+    animationSpeed: 350,
+  });
+  // lightbox.destrou();
 }
 
 export function clearGallery(galleryEl) {
