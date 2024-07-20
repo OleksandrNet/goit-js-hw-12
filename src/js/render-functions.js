@@ -1,6 +1,12 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-let lightbox;
+
+const lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+  animationSpeed: 350,
+});
+
 export function renderCards(cards, galleryEl) {
   const markup = cards
     .map(
@@ -20,22 +26,7 @@ export function renderCards(cards, galleryEl) {
     .join('');
 
   galleryEl.insertAdjacentHTML('beforeend', markup);
-  // new SimpleLightbox('.gallery a');
-  // const lightbox = $('.gallery a').simpleLightbox({}).destrou();
-  // lightbox;
-
-  // const lightbox = new SimpleLightbox('.gallery a', {
-  //   captionsData: 'alt',
-  //   captionDelay: 250,
-  //   animationSpeed: 350,
-  // });
-  // lightbox.destrou();
-
-  if (!lightbox) {
-    lightbox = new SimpleLightbox('.gallery a');
-  } else {
-    lightbox.refresh();
-  }
+  lightbox.refresh();
 }
 
 export function clearGallery(galleryEl) {
